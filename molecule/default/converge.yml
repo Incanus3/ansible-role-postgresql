@@ -8,6 +8,11 @@
       - name: example
     postgresql_users:
       - name: jdoe
+    postgresql_global_config_options:
+      - option: hot_standby
+        value: 'on'
+      - option: hot_standby_feedback
+        value: 'on'
 
   pre_tasks:
     # The Fedora 30+ container images have only C.UTF-8 installed
